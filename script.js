@@ -55,3 +55,9 @@ function salvarTarefas() {
     });
     localStorage.setItem("tarefas", JSON.stringify(tarefas));
 }
+function limparTudo() {
+    if (confirm("Tem certeza que deseja remover todas as tarefas?")){
+        document.getElementById("lista-tarefas").innerHTML = "";
+        localStorage.removeItem("tarefas");
+    }
+}
