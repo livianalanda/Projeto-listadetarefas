@@ -39,7 +39,22 @@ function criarElementoTarefa(texto, riscada) {
         salvarTarefas();
     });
 
+    // Botão editar tarefa
+    const botaoEditar = document.createElement("button");
+    botaoEditar.textContent = "✏️";
+    botaoEditar.className = "editar";
+
+    botaoEditar.addEventListener("click", function (event) {
+        event.stopPropagation();
+        const novoTexto = prompt("Editar tarefa:", texto);
+        if (novoTexto !== null && novoTexto.trim() !== "") {
+        li.firstChild.textContent = novoTexto.trim();
+        salvarTarefas ();
+        }
+    });
+
     li.appendChild(botaoExcluir);
+    li.appendChild(botaoEditar);
 
     document.getElementById("lista-tarefas").appendChild(li);
     input.value = "";  
