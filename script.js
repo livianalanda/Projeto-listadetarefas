@@ -1,6 +1,6 @@
 function adicionarTarefa() {
     const input = document.getElementById("nova-tarefa");
-    const texto = input.ariaValueMax.trim();
+    const texto = input.value.trim();
 
     if (texto === "") return;
 
@@ -16,9 +16,9 @@ function adicionarTarefa() {
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "X";
     botaoExcluir.className = "excluir";
-    
+
     botaoExcluir.addEventListener("click", function (event) {
-        event,stopPropagation();
+        event.stopPropagation();
         li.remove();
     });
 
