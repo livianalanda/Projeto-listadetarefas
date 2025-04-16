@@ -1,5 +1,5 @@
 window.onload = function () {
-    const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas"));
     tarefasSalvas.forEach(tarefa => criarElementoTarefa(tarefa.texto, tarefa.riscada));
 };
 
