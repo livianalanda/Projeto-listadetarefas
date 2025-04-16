@@ -1,0 +1,13 @@
+.riscada {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.excluir {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
