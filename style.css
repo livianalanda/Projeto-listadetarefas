@@ -1,22 +1,135 @@
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeef5; /* rosa bebê suave */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffb6c1;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegação de abas */
+nav {
+    background-color: #ffe0ea;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+    text-decoration: none;
+    color: #c2185b;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f8bbd0;
+}
+
+/* Área principal */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Campo de adicionar tarefa */
+.adicionar-tarefa {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.adicionar-tarefa input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.adicionar-tarefa button {
+    padding: 10px 20px;
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.adicionar-tarefa button:hover {
+    background-color: #ec407a;
+}
+
+/* Lista de tarefas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto riscado */
 .riscada {
     text-decoration: line-through;
     color: gray;
 }
 
-.excluir {
+/* Botões individuais */
+.botao {
     margin-left: 10px;
     background-color: transparent;
     border: none;
-    color: red;
+    color: #c2185b;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.botao:hover {
+    color: #ad1457;
+}
+
+/* Botão "Limpar Tudo" */
+#limpar-tudo {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f06292;
+    color: white;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
 }
 
-.editar {
-    margin-left: 5px;
-    background-color: transparent;
-    border: none;
-    color: blue;
-    cursor: pointer;
-    font-weight: bold;
+#limpar-tudo:hover {
+    background-color: #e91e63;
 }
